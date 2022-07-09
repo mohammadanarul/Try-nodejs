@@ -12,8 +12,11 @@ app.get('/',(request, response, next)=>{
     response.sendFile(__dirname + "/templates/index.html");
 })
 
-app.get('/register',(request, response, next)=>{
+app.get('/register',(_request, response, next)=>{
     response.sendFile(__dirname + "/templates/register.html");
+})
+app.get('/login',(_request, response, next)=>{
+    response.sendFile(__dirname + "/templates/login.html");
 })
 
 function requestHandle(req, res, next){
@@ -26,4 +29,5 @@ function requestHandle(req, res, next){
 
 app.listen(4000,()=>{
     console.log('I am nodejs programer.');
+    console.log("http://localhost:4000");
 })
